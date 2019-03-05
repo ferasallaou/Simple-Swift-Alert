@@ -11,7 +11,7 @@ Just a simple extension for UIViewController to make creating alerts easier.
 # Example
 
 ```
-let myBtn = createBtn("Ok?", .cancel)
+let myBtn = createBtn("Ok?", .cancel) // You can use between .cancel or .default or .destructive 
 let myBtn2 = createBtn("Cancel", .destructive)
 showAlert("This is a test Title", "This is a test Message :) ", [myBtn, myBtn2])
 ```
