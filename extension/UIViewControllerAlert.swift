@@ -11,8 +11,16 @@ import UIKit
 
 extension UIViewController {
     
-    func createBtn(_ title: String, _ alertStyle: UIAlertAction.Style) -> UIAlertAction {
-        let actionBtn = UIAlertAction(title: title, style: alertStyle, handler: nil)
+    func createBtn( title: String, alertStyle: UIAlertAction.Style, completionHandler: (() -> Void)?) -> UIAlertAction {
+        var actionBtn: UIAlertAction!
+        
+        if let _ = completionHandler {
+            actionBtn = UIAlertAction(title: title, style: alertStyle, handler: {_ in completionHandler!()})
+        }else{
+            actionBtn = UIAlertAction(title: title, style: alertStyle, handler: nil)
+        }
+        
+        
         return actionBtn
     }
     
