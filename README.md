@@ -11,9 +11,11 @@ Just a simple extension for UIViewController to make creating alerts easier.
 # Example
 
 ```
-let myBtn = createBtn(title: "Ok?", alertStyle: .cancel, completionHandler: { self.test() }) // You can use between .cancel or .default or .destructive 
+// You can Choose between .cancel or .default or .destructive 
+let myBtn = createBtn(title: "Ok?", alertStyle: .default, completionHandler: { self.test() })
 let myBtn2 = createBtn(title: "Cancel", alertStyle: .destructive, completionHandler: nil)
-showAlert("This is a test Title", "This is a test Message :) ", [myBtn, myBtn2])
+// You can choose between .actionSheet or .alert as an alert style. 
+showAlert(title: "This is a test Title", message: "This is a test Message :) ", buttons: [myBtn, myBtn2], style: .actionSheet)
 ```
 
 * You can use Clousers to do certain things when the User tabs on any button, and that's by passing the completionHandler parameters which could be nil or a function
@@ -24,4 +26,5 @@ func test() -> Void{
     }
 ```
 
-![](extensionPhoto.png)
+![](alert.png)
+![](actionSheet.png)
