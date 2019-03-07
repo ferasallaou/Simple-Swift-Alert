@@ -26,5 +26,4 @@ func test() -> Void{
     }
 ```
 
-![](alert.png)
-![](actionSheet.png)
+![](preview.png)
