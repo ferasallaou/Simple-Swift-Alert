@@ -24,10 +24,10 @@ extension UIViewController {
         return actionBtn
     }
     
-    func showAlert(_ title:String,_ message: String, _ buttons:[UIAlertAction])
+    func showAlert( title:String, message: String, buttons:[UIAlertAction], style: UIAlertController.Style)
         {
     
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         
         if buttons.count > 0 {
             for singleBtn in buttons {
